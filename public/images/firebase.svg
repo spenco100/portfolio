@@ -1,0 +1,61 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 51 51">
+      <defs>
+        <linearGradient id="linear-gradient" x1="-173.85" y1="223.27" x2="-173.53" y2="223.04" gradientTransform="matrix(109.5, 0, 0, -150.04, 19042.75, 33508.33)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#fff" stopOpacity="0.1"/><stop offset="1" stopColor="#fff" stopOpacity="0"/>
+        </linearGradient>
+        <mask id="mask" x="8.47" y="2.11" width="34.01" height="46.56" maskUnits="userSpaceOnUse">
+          <g transform="translate(1 1)">
+            <g id="mask-3">
+              <path id="path-2" d="M0,0Z" fill="#fff" fillRule="evenodd"/>
+            </g>
+          </g>
+        </mask>
+        <mask id="mask-2" x="0" y="0" width="50.97" height="50.79" maskUnits="userSpaceOnUse">
+          <g transform="translate(1 1)">
+            <g id="mask-3-2" data-name="mask-3">
+              <path id="path-2-2" data-name="path-2" d="M0,0Z" fill="#fff" fillRule="evenodd"/>
+            </g>
+          </g>
+        </mask>
+        <mask id="mask-3-3" x="8.49" y="2.11" width="33.98" height="46.56" maskUnits="userSpaceOnUse">
+          <g transform="translate(1 1)">
+            <g id="mask-3-4" data-name="mask-3">
+              <path id="path-2-3" data-name="path-2" d="M0,0Z" fill="#fff" fillRule="evenodd"/>
+            </g>
+          </g>
+        </mask>
+      </defs>
+      <g id="Page-1">
+        <g id="styleguide">
+          <g id="Group-16">
+            <g id="Group-9">
+              <g id="Group-26">
+                <g id="logo_lockup_firebase_vertical" data-name="logo lockup firebase vertical">
+                  <g id="_Group_" data-name=" Group ">
+                    <g id="_Path_5" data-name=" Path 5">
+                      <path id="path-2-4" data-name="path-2" d="M0,0Z" transform="translate(1 1)" fill="url(#linear-gradient)"/>
+                    </g>
+                    <g mask="url(#mask)">
+                      <g id="_Group_2" data-name=" Group 2">
+                        <g id="_Group_5" data-name=" Group 5">
+                          <g id="_Group_6" data-name=" Group 6">
+                            <path id="_Path_2" data-name=" Path 2" d="M0,0Z" transform="translate(1 1)" fill="#ffca28"/>
+                          </g>
+                        </g>
+                        <path id="_Compound_Path_" data-name=" Compound Path " d="M0,0ZM0,0Z" transform="translate(1 1)" fill="#fff" fillOpacity="0.2"/>
+                      </g>
+                    </g>
+                    <g mask="url(#mask-2)">
+                      <polygon id="_Path_4" data-name=" Path 4" points="0 0 51 0 51 51 0 51 0 0" fill="none"/>
+                    </g>
+                    <g mask="url(#mask-3-3)">
+                      <path id="_Path_5-2" data-name=" Path 5" d="M0,0Z" transform="translate(1 1)" fill="url(#linear-gradient)"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>

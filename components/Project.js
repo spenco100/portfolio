@@ -32,18 +32,6 @@ export default function Project({ image, logo, title, link, description, childre
         {/* icons */}
         { children }
       </div>
-
-      {/* {image && 
-        <img
-          src={image.src}
-          className="rounded-t-lg w-96" 
-      />}
-      <div className="py-8 px-10">
-        <h3 className="text-center text-white text-2xl font-semibold">{title}</h3>
-        <div className="flex flex-col items-center text-white">
-          {children}
-        </div>
-      </div> */}
     </div>
   )
 }
