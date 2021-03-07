@@ -6,6 +6,9 @@ export default function firebaseLogo() {
 
 
     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.98 46.56">
+
+      {/* <path id="_Path_" data-name=" Path " d="M5.95 32.547 10.855 1.377a.91.91 0 0 1 1.7-.289l5.1 9.401 2.006-3.825A.901.901 0 0 1 20.4 6.179a.918.918 0 0 1 .808.485L34.85 32.547Z" transform="translate(-7.01 -0.72)" fill="#ffa000"/> */}
+      
       <path id="_Path_" data-name=" Path " d="M7,38.29,12.77,1.62a1.07,1.07,0,0,1,2-.34l6,11.06,2.36-4.5A1.06,1.06,0,0,1,24,7.27a1.08,1.08,0,0,1,.95.57L41,38.29Z" transform="translate(-7.01 -0.72)" fill="#ffa000"/>
       <polygon id="Shape" points="19.86 23.28 13.67 11.62 0 37.56 19.86 23.28" fill="#f57c00"/>
       <g id="_Group_6" data-name=" Group 6">

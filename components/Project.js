@@ -2,12 +2,14 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function Project({ image, logo, title, link, description, children }) { // only children are icons
   return (
-    <div>
+    <>
       {/* overflow-hidden */}
       <div className="rounded rounded-lg bg-gray-800 shadow max-w-xs my-3">
           <img src={image.src} className="w-full rounded rounded-t-lg" />
           <div className="flex justify-start items-end -ml-2 -mt-6">
-            <img src={logo.src} className="w-16 bg-gray-700 rounded-full" />
+            <div className="w-16 bg-gray-700 rounded-full p-1">
+              <img src={logo.src} className="rounded-full" />
+            </div>
             <a className="pl-2 pb-1 text-sm text-blue-400 hover:text-blue-500" href={link.url}>
               { link.pretty }
             </a>
@@ -32,6 +34,6 @@ export default function Project({ image, logo, title, link, description, childre
         {/* icons */}
         { children }
       </div>
-    </div>
+    </>
   )
 }
