@@ -171,36 +171,36 @@ export default class Home extends React.Component {
                 </a>
               </p> */}
 
-              <div className="grid grid-cols-2 mt-3">
-                <div className="flex flex-col items-center">
+              <div className="grid grid-cols-2 mt-3 gap-2">
+                <div className="flex flex-row items-center rounded-lg bg-gray-800 py-2 px-4">
                   { Icon(HiOutlineMailOpen, { href: "mailto:spencer.speas@gmail.com", color: "white" }) }
-                  <a href="mailto:spencer.speas@gmail.com" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                  <a href="mailto:spencer.speas@gmail.com" className="cursor-pointer text-blue-400 hover:text-blue-500 ml-2">
                     Spencer.Speas@Gmail.com
                   </a>
                 </div>
-                <div className="flex flex-col items-center group">
+                <div className="flex flex-row items-center rounded-lg bg-gray-800 py-2 px-4">
                   { Icon(ImPhone, { href: "tel:+19169901341", color: "white" }) }
-                  <a href="tel:+19169901341" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                  <a href="tel:+19169901341" className="cursor-pointer text-blue-400 hover:text-blue-500 ml-2">
                     (916) 990-1341
                   </a>
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 mt-3">
+              <div className="grid grid-cols-3 mt-5">
                 <div className="flex flex-col items-center">
-                  { Icon(SiGithub, { href: "https://github.com/spenco100", color: "white", label: "Spenco100" }) }
+                  { Icon(SiGithub, { href: "https://github.com/spenco100", color: "white" }) }
                   <a href="https://github.com/spenco100" className="cursor-pointer text-blue-400 hover:text-blue-500">
                     @spenco100
                   </a>
                 </div>
-                <div className="flex flex-col items-center group">
+                <div className="flex flex-col items-center">
                   { Icon(SiFacebook, { href: "https://facebook.com/spencer.speas.77", color: "white" }) }
                   <a href="https://facebook.com/spencer.speas.77" className="cursor-pointer text-blue-400 hover:text-blue-500">
                     @spencer.speas.77
                   </a>
                 </div>
                 <div className="flex flex-col items-center">
-                  { Icon(SiReddit, { href: "https://reddit.com/u/sragan16", color: "white", label: "Sragan16" }) }
+                  { Icon(SiReddit, { href: "https://reddit.com/u/sragan16", color: "white" }) }
                   <a href="https://reddit.com/u/sragan16" className="cursor-pointer text-blue-400 hover:text-blue-500">
                     @sragan16
                   </a>
