@@ -12,8 +12,10 @@ import Icon from '../components/Icons/Icon';
 import { FaStripe } from "react-icons/fa"
 import { IoLogoVimeo } from "react-icons/io";
 import { IoLogoSass } from "react-icons/io5";
-import { DiNodejs } from "react-icons/di";
-import { SiBulma, SiNetlify, SiMongodb, SiGithub, SiFacebook, SiReddit } from "react-icons/si";
+import { SiBulma, SiNetlify, SiGithub, SiFacebook, SiReddit, SiGmail } from "react-icons/si";
+import { ImPhone } from "react-icons/im";
+import { HiOutlineMailOpen } from "react-icons/hi";
+
 
 import ChakraLogo from '../components/svg/chakra';
 // import MDLogo from '../components/svg/material-design';
@@ -30,8 +32,8 @@ export default class Home extends React.Component {
         <div className="mx-auto">
 
 
+          {/* Hero */}
           <div className="h-screen bg-gray-800 flex flex-col items-center justify-around text-center text-white">
-
             <div className="flex flex-col items-center">
               <img src="/images/profile.jpg" alt="My wedding day" 
                   className="my-4 rounded-full w-72 shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl" 
@@ -45,21 +47,6 @@ export default class Home extends React.Component {
             </div>
           </div>
 
-
-          {/* <div className="relative h-screen">
-              <div className="absolute top-0 z-5 w-full flex flex-col items-center mt-14">
-                <img src="/images/profile.jpg" alt="My wedding day" 
-                    className="left-1/2 rounded-full w-72 shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl" 
-                />
-              </div>
-            <div className="bg-gray-800 h-full w-full flex flex-col items-center justify-center text-white">
-
-              <div className="">
-                <p>3 Years startup experience</p>
-                <p>Vue / Node / Express / NoSQL</p>
-              </div>
-            </div>
-          </div> */}
 
 
           <Section title="Polished Projects">
@@ -173,40 +160,53 @@ export default class Home extends React.Component {
 
 
           <Section title="Contact Info">
+            <div className="flex flex-col items-center">
+              {/* <p className="text-center">
+                <a href="mailto:spencer.speas@gmail.com" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                  Spencer.Speas@Gmail.com
+                </a>
+                <br />
+                <a href="tel:+19169901341" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                  (916) 990-1341
+                </a>
+              </p> */}
 
-              <div className="flex flex-col items-center">
-                <p className="text-center">
+              <div className="grid grid-cols-2 mt-3">
+                <div className="flex flex-col items-center">
+                  { Icon(HiOutlineMailOpen, { href: "mailto:spencer.speas@gmail.com", color: "white" }) }
                   <a href="mailto:spencer.speas@gmail.com" className="cursor-pointer text-blue-400 hover:text-blue-500">
                     Spencer.Speas@Gmail.com
                   </a>
-                  <br />
+                </div>
+                <div className="flex flex-col items-center group">
+                  { Icon(ImPhone, { href: "tel:+19169901341", color: "white" }) }
                   <a href="tel:+19169901341" className="cursor-pointer text-blue-400 hover:text-blue-500">
                     (916) 990-1341
                   </a>
-                </p>
-
-                <div className="grid grid-cols-3">
-                  <div className="flex flex-col items-center">
-                    { Icon(SiGithub, { href: "https://github.com/spenco100", color: "white", label: "Spenco100" }) }
-                    <a href="https://github.com/spenco100" className="cursor-pointer text-blue-400 hover:text-blue-500">
-                      @spenco100
-                    </a>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    { Icon(SiReddit, { href: "https://reddit.com/u/sragan16", color: "white", label: "Sragan16" }) }
-                    <a href="https://reddit.com/u/sragan16" className="cursor-pointer text-blue-400 hover:text-blue-500">
-                      @sragan16
-                    </a>
-                  </div>
-                  <div className="flex flex-col items-center group">
-                    { Icon(SiFacebook, { href: "https://facebook.com/spencer.speas.77", color: "white" }) }
-                    <a href="https://facebook.com/spencer.speas.77" className="cursor-pointer text-blue-400 hover:text-blue-500">
-                      Spencer Speas
-                    </a>
-                  </div>
                 </div>
-
               </div>
+
+              <div className="grid grid-cols-3 mt-3">
+                <div className="flex flex-col items-center">
+                  { Icon(SiGithub, { href: "https://github.com/spenco100", color: "white", label: "Spenco100" }) }
+                  <a href="https://github.com/spenco100" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                    @spenco100
+                  </a>
+                </div>
+                <div className="flex flex-col items-center group">
+                  { Icon(SiFacebook, { href: "https://facebook.com/spencer.speas.77", color: "white" }) }
+                  <a href="https://facebook.com/spencer.speas.77" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                    @spencer.speas.77
+                  </a>
+                </div>
+                <div className="flex flex-col items-center">
+                  { Icon(SiReddit, { href: "https://reddit.com/u/sragan16", color: "white", label: "Sragan16" }) }
+                  <a href="https://reddit.com/u/sragan16" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                    @sragan16
+                  </a>
+                </div>
+              </div>
+            </div>
           </Section>
 
 
