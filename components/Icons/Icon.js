@@ -25,7 +25,7 @@ export default function buildIcon(componentName, { href, color, label, src }) {
   );
   const link = React.createElement( // wrap everything in a link
     'a',
-    { href, className: "hover:transform scale-120" },
+    { href, className: "hover:transform scale-120", target: "_blank" },
     circle
   );
   if (!label) {

@@ -12,13 +12,9 @@ import Icon from '../components/Icons/Icon';
 import { FaStripe } from "react-icons/fa"
 import { IoLogoVimeo } from "react-icons/io";
 import { IoLogoSass } from "react-icons/io5";
-import { SiBulma, SiNetlify, SiGithub, SiFacebook, SiReddit, SiGmail } from "react-icons/si";
+import { SiBulma, SiNetlify, SiGithub, SiFacebook, SiReddit } from "react-icons/si";
 import { ImPhone } from "react-icons/im";
 import { HiOutlineMailOpen } from "react-icons/hi";
-
-
-import ChakraLogo from '../components/svg/chakra';
-// import MDLogo from '../components/svg/material-design';
 
 
 
@@ -57,29 +53,32 @@ export default class Home extends React.Component {
               <Project
                 title="Aceso Recovery"
                 image={{
-                  src: 'images/Aceso/Landing.jpg',
+                  src: 'images/projects/Aceso/Landing.jpg',
                 }}
                 logo={{
-                  src: 'images/Aceso/Logo.png'
+                  src: 'images/projects/Aceso/Logo.png'
                 }}
                 link={{
                   url: "https://www.AcesoRecovery.com",
                   pretty: "AcesoRecovery.com"
                 }}
-                description="Aceso bridges the gap between physical therapists and their patients."
+                post={{
+                  link: "/projects/aceso"
+                }}
+                description="Connect physical therapists to their patients, turn home exercise programs into ad streams."
               >
 
                 <IconContainer
                   top={<>
                     { Icon(Image, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
                     { Icon(SiBulma, { href: "https://bulma.io/", color: "#00d1b2", label: "Bulma" }) }
-                    { Icon(Image, { href: "https://firebase.google.com/", label: "Firebase", src: "/images/icons/firebase.svg" }) }
+                    { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#bf4080", label: "Sass" }) }
                     { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
                   </>}
                   bottom={<>
                     { Icon(IoLogoVimeo, { href: "https://vimeo.com/", color: "rgb(15, 174, 241)", label: "Vimeo" }) }
                     { Icon(FaStripe, { href: "https://stripe.com/", color: "white", label: "Stripe" }) }
-                    { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#bf4080", label: "Sass" }) }
+                    { Icon(Image, { href: "https://firebase.google.com/", label: "Firebase", src: "/images/icons/firebase.svg" }) }
                   </>}
                   showBoth={true}
                 />
@@ -91,27 +90,31 @@ export default class Home extends React.Component {
               <Project
                 title="Repairman Pro"
                 image={{
-                  src: 'images/Repairman/Landing.jpg',
+                  src: 'images/projects/Repairman/Landing.jpg',
                 }}
                 logo={{
-                  src: 'images/Repairman/Logo.png'
+                  src: 'images/projects/Repairman/Logo.png'
                 }}
                 link={{
                   url: "https://repairman-pro.app",
                   pretty: "Repairman-Pro.app"
+                }}
+                post={{
+                  link: "/projects/aceso"
                 }}
                 description="Automatic device inspection checklists, connected with RepairDesk."
               >
                 <IconContainer
                   top={<>
                     { Icon(Image, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
-                    { Icon(ChakraLogo, { href: "https://vue.chakra-ui.com/", label: "ChakraUI" }) }
-                    { Icon(Image, { href: "https://www.repairdesk.co/", src: "/images/icons/repairdesk.svg", label: "RepairDesk" }) }
+                    { Icon(Image, { href: "https://vue.chakra-ui.com/", src: "/images/icons/chakra.svg", label: "ChakraUI" }) }
+                    { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#bf4080", label: "Sass" }) }
+                    { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
                   </>}
                   bottom={<>
                     { Icon(Image, { href: "https://www.mongodb.com/cloud/atlas", src: "/images/icons/mongo.svg", label: "MongoDB" }) }
                     { Icon(Image, { href: "https://nodejs.org/en/", src: "/images/icons/node.svg", label: "NodeJS" }) }
-                    {/* { Icon(DiNodejs, { href: "https://nodejs.org/en/", color: "white", label: "NodeJS" }) } */}
+                    { Icon(Image, { href: "https://www.repairdesk.co/", src: "/images/icons/repairdesk.svg", label: "RepairDesk" }) }
                   </>}
                   showBoth={true}
                 />
@@ -124,26 +127,30 @@ export default class Home extends React.Component {
                 className="md:row-span-2"
                 title="Aceso ML"
                 image={{
-                  src: 'images/Aceso/Landing.jpg',
+                  src: '/images/projects/Aceso-ML/Landing.jpg'
                 }}
                 logo={{
-                  src: 'images/Aceso/Logo.png'
+                  src: 'images/projects/Aceso-ML/Logo.png'
                 }}
                 link={{
-                  url: "https://www.AcesoRecovery.com",
-                  pretty: "AcesoRecovery.com"
+                  pretty: "Deprecated"
                 }}
-                description="Aceso bridges the gap between physical therapists and their patients."
+                post={{
+                  link: "/projects/aceso-ml"
+                }}
+                description="Assess range of motion progression using your webcam and computer vision."
               >
                 <IconContainer
                   top={<>
                     { Icon(Image, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
-                    
+                    { Icon(Image, { href: "https://vuetifyjs.com/en/", label: "Vuetify", src: "/images/icons/vuetify.svg" }) }
                     { Icon(Image, { href: "https://firebase.google.com/", label: "Firebase", src: "/images/icons/firebase.svg" }) }
                     { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
                   </>}
                   bottom={<>
-                    { Icon(Image, { href: "https://vuetifyjs.com/en/", label: "Vuetify", src: "/images/icons/vuetify.svg" }) }
+                    { Icon(Image, { href: "https://www.python.org/psf-landing/", src: "/images/icons/python.svg", label: "Python" }) }
+                    { Icon(Image, { href: "https://nodejs.org/en/", src: "/images/icons/node.svg", label: "NodeJS" }) }
+                    { Icon(Image, { href: "https://redis.io/", src: "/images/icons/redis-cube.svg", label: "Redis" }) }
                     { Icon(Image, { href: "https://cloud.google.com/", src: "/images/icons/google-cloud.png", label: "Google Compute Engine" }) }
                   </>}
                   showBoth={true}
@@ -161,16 +168,6 @@ export default class Home extends React.Component {
 
           <Section title="Contact Info">
             <div className="flex flex-col items-center">
-              {/* <p className="text-center">
-                <a href="mailto:spencer.speas@gmail.com" className="cursor-pointer text-blue-400 hover:text-blue-500">
-                  Spencer.Speas@Gmail.com
-                </a>
-                <br />
-                <a href="tel:+19169901341" className="cursor-pointer text-blue-400 hover:text-blue-500">
-                  (916) 990-1341
-                </a>
-              </p> */}
-
               <div className="grid grid-cols-2 mt-3 gap-2">
                 <div className="flex flex-row items-center rounded-lg bg-gray-800 py-2 px-4">
                   { Icon(HiOutlineMailOpen, { href: "mailto:spencer.speas@gmail.com", color: "white" }) }
@@ -211,7 +208,6 @@ export default class Home extends React.Component {
 
 
         </div>
-
 
       </>
     )
