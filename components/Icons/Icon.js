@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Tooltip from './Tooltip';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 // holds a specific, given icon 
 export default function buildIcon(componentName, { href, color, label, src }) {
@@ -9,10 +9,10 @@ export default function buildIcon(componentName, { href, color, label, src }) {
     eval(componentName),
     { color, size: '3rem' }
   );
-  if (src) { {/* layout: 'fill', style: { padding: '2em' } */}
+  if (src) { // if passed a source, it is a custom icon, not from react-icons
     icon = React.createElement(
-      Image,
-      { src, width: 48, height: 48, style: {  } }
+      'img',
+      { src, width: 48, height: 48, style: {  }, alt: `${label} icon` }
     )
   }
   const circle = React.createElement( // circle around the icon

@@ -31,7 +31,7 @@ export default class Home extends React.Component {
           {/* Hero */}
           <div className="h-screen bg-gray-800 flex flex-col items-center justify-around text-center text-white">
             <div className="flex flex-col items-center">
-              <img src="/images/profile.jpg" alt="My wedding day" 
+              <img src="/images/profile.jpg" alt="My wedding picture" 
                   className="my-4 rounded-full w-72 shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl" 
               />
               <h1 className="text-5xl font-extrabold">Spencer Speas</h1>
@@ -40,6 +40,7 @@ export default class Home extends React.Component {
             <div className="text-lg ">
               <p>3 Years startup experience</p>
               <p className="">Vue / Node / Express / NoSQL</p>
+
             </div>
           </div>
 
