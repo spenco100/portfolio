@@ -306,7 +306,7 @@ export default class Home extends React.Component {
                   src: 'images/projects/Streetrat/Landing.jpg',
                 }}
                 logo={{
-                  src: 'images/projects/Aceso/Logo.png'
+                  src: 'images/projects/Streetrat/Logo.png'
                 }}
                 link={{
                   pretty: "Anticipated release 3/30/21"
@@ -314,7 +314,7 @@ export default class Home extends React.Component {
                 // post={{
                 //   link: "/projects/aceso"
                 // }}
-                description="Automated checkout Chrome extension via notifications from proxied inventory scrapers."
+                description="Proxied inventory scraping pair with an automated checkout extension for Chrome."
               >
 
                 <IconContainer
