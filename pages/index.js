@@ -4,18 +4,42 @@ import Image from 'next/image';
 
 import Section from '../components/Section';
 import Project from '../components/Project';
-// import Tooltip from '../components/Icons/Tooltip';
+import Tooltip from '../components/Icons/Tooltip';
 import IconContainer from '../components/Icons/IconContainer';
 import Icon from '../components/Icons/Icon';
+import MiniIcon from '../components/Icons/MiniIcon';
 
 
 import { FaStripe } from "react-icons/fa"
 import { IoLogoVimeo } from "react-icons/io";
-import { IoLogoSass } from "react-icons/io5";
-import { SiBulma, SiNetlify, SiGithub, SiFacebook, SiReddit, SiReact } from "react-icons/si";
+import { IoLogoSass, IoPieChart, IoCodeSlash } from "react-icons/io5";
+import { SiBulma, SiNetlify, SiGithub, SiFacebook, SiReddit, SiReact, SiApple, SiTailwindcss } from "react-icons/si";
 import { ImPhone } from "react-icons/im";
 import { HiOutlineMailOpen } from "react-icons/hi";
+import { GrWordpress } from "react-icons/gr";
 
+
+
+const ExperienceItem = ({ title, company, time, description, icon, isLast }) => {
+  return (<>
+    {/* {!isLast && <div className="border-r-2 border-gray-500 absolute top-0" style={{ left: "11px" }} />}   */}
+    {/* <li className="mb-2"> */}
+      {/* <div className="border h-full" /> */}
+    <li className={ isLast ? 'pb-3' : 'border-l-2 border-gray-700 pb-3' }>
+      <div className="flex items-flex-start">
+        <div className="-ml-3">
+          { MiniIcon(icon) }
+        </div>
+        <div className="flex-1 ml-4 max-w-3xl">
+          <p className="text-lg font-semibold">{ title }</p>
+          <p className="text-md opacity-80">{ company }</p>
+          <p className="text-sm opacity-50">{ time }</p>
+          <p>{ description }</p>
+        </div>
+      </div>
+    </li>
+  </>)
+}
 
 
 export default class Home extends React.Component {
@@ -31,92 +55,74 @@ export default class Home extends React.Component {
           {/* Hero */}
           <div className="h-screen bg-gray-800 flex flex-col items-center justify-around text-center text-white">
             <div className="flex flex-col items-center">
-              <img src="/images/profile.jpg" alt="My wedding picture" 
+              <img src="/images/home/profile.jpg" alt="My wedding picture" 
                   className="my-4 rounded-full w-72 shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl" 
               />
               <h1 className="text-5xl font-extrabold">Spencer Speas</h1>
               <h2 className="text-2xl pt-2 font-mono font-bold">SaaS Specialist</h2>
             </div>
 
-            <div className="flex flex-col items-center justify-center overflow-hidden mb-2">
-              <div className="relative max-w-6xl">
-                <img
-                  style={{ width: '400px', height: 'auto' }}
-                  src="/images/github-activity.png"
-                  className="object-cover rounded-b-xl"
-                  alt="My Github activity"
-                />
-                <div className="absolute p-4 inset-0 flex flex-col justify-end bg-gradient-to-b from-transparent to-gray-800 backdrop backdrop-blur-5 text-white">
-                  <p className="font-mono text-lg">Vue / Express / Node / NoSQL</p>
+            <Tooltip label="My Github activity, the last 4 months">
+              <div className="flex flex-col items-center justify-center overflow-hidden mb-2">  
+                <div className="relative max-w-6xl">
+                  <img
+                    style={{ width: '400px', height: 'auto' }}
+                    src="/images/home/github-activity.png"
+                    className="object-cover rounded-b-xl"
+                    alt="My Github activity the last 4 months"
+                  />
+                  <div className="absolute p-4 inset-0 flex flex-col justify-end bg-gradient-to-b from-transparent to-gray-800 backdrop backdrop-blur-5 text-white
+                                  transition duration-500 ease-in-out transform hover:opacity-20"
+                  >
+                    <p className="font-mono text-lg">Vue / Express / Node / NoSQL</p>
+                  </div>  
                 </div>
-                
-                {/* <div className="absolute p-4 inset-0 flex flex-col justify-end bg-gradient-to-b from-transparent to-gray-900 backdrop backdrop-blur-5 text-white
-                                transition duration-500 ease-in-out transform hover:opacity-20">
-                  <h1 className="font-bold text-4xl">{ title.main }</h1>
-                  <span className="opacity-70">{ time.start } {' '}-{' '} { time.end }</span>
-                </div> */}
               </div>
-            </div>
+            </Tooltip>
           </div>
 
 
-          <Section title="3 Years in Startups" classes="pt-14">
+          <Section title="Nearly 4 Years in Startups" classes="pt-14">
 
             <div className="relative max-w-4xl m-8">
-              <div className="border-r-2 border-gray-500 absolute h-full top-0" style={{ left: "11px" }} />
               <ul className="list-none m-0 p-0">
-                <li className="mb-2">
-                  <div className="flex items-center mb-1">
-                    <div className="bg-gray-500 rounded-full h-6 w-6" />
-                    <div className="flex-1 ml-4 font-medium">2017 - 2018</div>
-                  </div>
-                  <div className="ml-12">
-                    Sold Macbooks and iPhones like it was crack
-                  </div>
-                </li>
-                <li className="mb-2">
-                  <div className="flex items-center mb-1">
-                    <div className="bg-gray-500 rounded-full h-6 w-6" />
-                    <div className="flex-1 ml-4 font-medium">Nov 2017 - Multiple Releases</div>
-                  </div>
-                  <div className="ml-12">
-                    v0.1.0 - v0.2.2
-                  </div>
-                </li>
-                <li className="mb-2">
-                  <div className="flex items-center mb-1">
-                    <div className="bg-gray-500 rounded-full h-6 w-6" />
-                    <div className="flex-1 ml-4 font-medium">Feb 2018 - Other stuff happened</div>
-                  </div>
-                  <div className="ml-12">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus perspiciatis facilis deserunt excepturi sunt pariatur consequuntur eveniet molestias ea quia? Magni veniam illo optio tempora modi exercitationem qui adipisci ex.
-                  </div>
-                </li>
-                <li className="mb-2">
-                  <div className="flex items-center mb-1">
-                    <div className="bg-gray-500 rounded-full h-6 w-6" />
-                    <div className="flex-1 ml-4 font-medium">July 2018 - More stuff happened</div>
-                  </div>
-                  <div className="ml-12">
-                    Consequuntur odit explicabo officiis veniam incidunt non velit ex consectetur magnam minima vero hic impedit cumque, blanditiis autem distinctio facere dolor atque facilis, eos, labore sunt iusto. Beatae, quas, dolorem?
-                  </div>
-                </li>
+                <ExperienceItem
+                  title="Macbook Flipper"
+                  company="256 QuickFix"
+                  time="2017 - 2019"
+                  description="After high school I started a company fixing and flipping Macbooks and iPhones, 
+                               until I gained a local reputation that landed me deals with some of the largest device repair shops in my area."
+                  icon={ SiApple }
+                  isLast={ false }
+                />
+                <ExperienceItem
+                  title="Wordpress & Facebook Ads"
+                  company="Kaboom Crash Media"
+                  time="2018 - 2020"
+                  description="Changing from B2C to B2B in device sales gave me the time to network and branch into Wordpress, HTML/CSS, and Facebook Ad strategies with a local agency."
+                  icon={ GrWordpress }
+                  isLast={ false }
+                />
+                <ExperienceItem
+                  title="Marketing Lead"
+                  company="Aceso Design"
+                  time="2019 - 2019"
+                  description="Met the co-founder of a medical tech startup, joined the company and quickly became the lead of marketing and advertising."
+                  icon={ IoPieChart }
+                  isLast={ false }
+                />
+                <ExperienceItem
+                  title="CTO"
+                  company="Aceso Design"
+                  time="2019 - 2021"
+                  description="Technical co-founder left the company, so I learned Javascript, Python, some Go, and took over as CTO.
+                               Fell in love with web development and learned the fullstack, and some ML."
+                  icon={ IoCodeSlash }
+                  isLast={ true }
+                />
               </ul>
-            </div> 
+            </div>
 
-
-            {/* <div className="max-w-3xl grid grid-cols-10 grid-rows-2">
-              <div>
-
-              </div>
-              <p>
-                After graduating high school I started fixing and flipping Macbooks and iPhones, 
-                until I gained a local reputation that landed me deals with some of the largest device repair shops in my area.
-              </p>
-              <p>
-                From that point on I only had to purchase devices, while they'd repair, sell, and warranty them.
-              </p>
-            </div> */}
           </Section>
 
 
@@ -147,8 +153,8 @@ export default class Home extends React.Component {
                 <IconContainer
                   top={<>
                     { Icon(Image, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
-                    { Icon(SiBulma, { href: "https://bulma.io/", color: "#00d1b2", label: "Bulma" }) }
-                    { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#bf4080", label: "Sass" }) }
+                    { Icon(SiBulma, { href: "https://bulma.io/", color: "#00D1B2", label: "Bulma" }) }
+                    { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#BF4080", label: "Sass" }) }
                     { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
                   </>}
                   bottom={<>
@@ -218,8 +224,8 @@ export default class Home extends React.Component {
                 <IconContainer
                   top={<>
                     { Icon(Image, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
-                    { Icon(SiBulma, { href: "https://bulma.io/", color: "#00d1b2", label: "Bulma" }) }
-                    { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#bf4080", label: "Sass" }) }
+                    { Icon(SiBulma, { href: "https://bulma.io/", color: "#00D1B2", label: "Bulma" }) }
+                    { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#BF4080", label: "Sass" }) }
                     { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
                   </>}
                   bottom={<>
@@ -262,7 +268,7 @@ export default class Home extends React.Component {
                   top={<>
                     { Icon(Image, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
                     { Icon(Image, { href: "https://vue.chakra-ui.com/", src: "/images/icons/chakra.svg", label: "ChakraUI" }) }
-                    { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#bf4080", label: "Sass" }) }
+                    { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#BF4080", label: "Sass" }) }
                     { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
                   </>}
                   bottom={<>
@@ -289,14 +295,14 @@ export default class Home extends React.Component {
                 post={{
                   link: "/projects/aceso"
                 }}
-                description="Automated checkout through a Chrome extension, connected to an inventory scraper."
+                description="Automated checkout through a Chrome extension connected to proxied inventory scrapers."
               >
 
                 <IconContainer
                   top={<>
-                    { Icon(SiReact, { href: "https://reactjs.org/", color: "#61dafb", label: "React" }) }
+                    { Icon(SiReact, { href: "https://reactjs.org/", color: "#61DAFB", label: "React" }) }
                     {/* { Icon(SiBulma, { href: "https://bulma.io/", color: "#00d1b2", label: "Bulma" }) } */}
-                    { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#bf4080", label: "Sass" }) }
+                    { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#BF4080", label: "Sass" }) }
                     {/* { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) } */}
                     { Icon(FaStripe, { href: "https://stripe.com/", color: "white", label: "Stripe" }) }
                   </>}
@@ -353,9 +359,31 @@ export default class Home extends React.Component {
             </div>
           </Section>
 
+          <div className="grid grid-cols-4 grid-rows-1 pt-10 pb-5" style={{ backgroundColor: "#090C13" }}>
+            <div className="col-start-1 col-end-5 flex flex-col items-center text-center text-white">
+              <p className="text-2xl font-semibold">This Site</p>
+              <p className="text-sm">Powered by</p>
+              <div className="flex flex-row p-2">
+                <div className="p-1">
+                  { Icon(SiReact, { href: "https://reactjs.org/", color: "#61DAFB", label: "React" }) }
+                </div>
+                <div className="p-1">
+                  { Icon(Image, { href: "https://nextjs.org/",  label: "NextJS", src: "images/icons/next.svg" }) }
+                </div>
+                <div className="p-1">
+                  { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
+                </div>
+                <div className="p-1">
+                  { Icon(SiTailwindcss, { href: "https://tailwindcss.com/", color: "#06B6D4", label: "TailwindCSS" }) }
+                </div>
+              </div>
+            </div>
+            <div className="text-left col-start-4 text-gray-400">
+              <p className="opacity-50">© Spencer Speas 2020</p>
+            </div>
+          </div>
 
         </div>
-
       </>
     )
   }
