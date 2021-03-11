@@ -32,7 +32,7 @@ export default function ProjectPost({ hero, title, time, link, children }) {
             <Link href="/">
               <a className="text-blue-400 hover:text-blue-500">
                 <AiOutlineArrowLeft style={{ display: 'inline-flex', marginInline: '0.3rem', marginBottom: '0.1rem' }} />
-                Back
+                Back to home
               </a>
             </Link>
             <span className="text-right">

@@ -90,15 +90,11 @@ export default class Home extends React.Component {
               </div>
             </Tooltip>
 
-
-
             <div className="animate-bounce cursor-pointer">
               <a onClick={ (e) => { this.linkClicked(e, '#experience') }}>
                 <FiChevronDown size="3em" color="whitesmoke" />
               </a>
             </div>
-
-
 
           </div>
 
@@ -282,9 +278,9 @@ export default class Home extends React.Component {
                 link={{
                   pretty: "Anticipated release 3/17/21"
                 }}
-                post={{
-                  link: "/projects/aceso"
-                }}
+                // post={{
+                //   link: "/projects/aceso"
+                // }}
                 description="Automatic device inspection checklists, connected with RepairDesk."
               >
                 <IconContainer
@@ -307,7 +303,7 @@ export default class Home extends React.Component {
               <Project
                 title="StreetRat"
                 image={{
-                  src: 'images/projects/Aceso/Landing.jpg',
+                  src: 'images/projects/Streetrat/Landing.jpg',
                 }}
                 logo={{
                   src: 'images/projects/Aceso/Logo.png'
@@ -315,10 +311,10 @@ export default class Home extends React.Component {
                 link={{
                   pretty: "Anticipated release 3/30/21"
                 }}
-                post={{
-                  link: "/projects/aceso"
-                }}
-                description="Automated checkout through a Chrome extension connected to proxied inventory scrapers."
+                // post={{
+                //   link: "/projects/aceso"
+                // }}
+                description="Automated checkout Chrome extension via notifications from proxied inventory scrapers."
               >
 
                 <IconContainer
@@ -344,41 +340,52 @@ export default class Home extends React.Component {
 
           <Section title="Contact Info" classes="pt-10 pb-20">
             <div className="flex flex-col items-center">
-              <div className="grid grid-cols-2 mt-3 gap-2">
-                <div className="flex flex-row items-center rounded-lg bg-gray-800 py-2 px-4">
-                  { Icon(HiOutlineMailOpen, { href: "mailto:spencer.speas@gmail.com", color: "white" }) }
-                  <a href="mailto:spencer.speas@gmail.com" className="cursor-pointer text-blue-400 hover:text-blue-500 ml-2">
-                    Spencer.Speas@Gmail.com
-                  </a>
-                </div>
-                <div className="flex flex-row items-center rounded-lg bg-gray-800 py-2 px-4">
-                  { Icon(ImPhone, { href: "tel:+19169901341", color: "white" }) }
-                  <a href="tel:+19169901341" className="cursor-pointer text-blue-400 hover:text-blue-500 ml-2">
-                    (916) 990-1341
-                  </a>
-                </div>
+
+              <div className="grid grid-cols-3 mt-5">                
+                
+                  <div className="flex flex-col items-center">
+                    { Icon(SiGithub, { href: "https://github.com/spenco100", color: "white" }) }
+                    <a href="https://github.com/spenco100" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                      @spenco100
+                    </a>
+                  </div>
+                
+                  <div className="flex flex-col items-center">
+                    { Icon(SiFacebook, { href: "https://facebook.com/spencer.speas.77", color: "white" }) }
+                    <a href="https://facebook.com/spencer.speas.77" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                      @spencer.speas.77
+                    </a>
+                  </div>
+                
+                  <div className="flex flex-col items-center">
+                    { Icon(SiReddit, { href: "https://reddit.com/u/sragan16", color: "white" }) }
+                    <a href="https://reddit.com/u/sragan16" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                      @sragan16
+                    </a>
+                  </div>
+                
               </div>
 
-              <div className="grid grid-cols-3 mt-5">
-                <div className="flex flex-col items-center">
-                  { Icon(SiGithub, { href: "https://github.com/spenco100", color: "white" }) }
-                  <a href="https://github.com/spenco100" className="cursor-pointer text-blue-400 hover:text-blue-500">
-                    @spenco100
-                  </a>
-                </div>
-                <div className="flex flex-col items-center">
-                  { Icon(SiFacebook, { href: "https://facebook.com/spencer.speas.77", color: "white" }) }
-                  <a href="https://facebook.com/spencer.speas.77" className="cursor-pointer text-blue-400 hover:text-blue-500">
-                    @spencer.speas.77
-                  </a>
-                </div>
-                <div className="flex flex-col items-center">
-                  { Icon(SiReddit, { href: "https://reddit.com/u/sragan16", color: "white" }) }
-                  <a href="https://reddit.com/u/sragan16" className="cursor-pointer text-blue-400 hover:text-blue-500">
-                    @sragan16
-                  </a>
-                </div>
+              <div className="grid grid-cols-2 gap-3 mt-5">
+                <a href="tel:+19169901341" className="group cursor-pointer text-blue-400 hover:text-blue-500
+                        bg-gray-800 p-2 rounded-lg hover:scale-105
+                        transition duration-500 ease-in-out transform group-hover:-translate-y-1">
+                  <div className="flex flex-col items-center justify-around h-full text-center">
+                    <ImPhone size="3rem" color="white" />
+                    {/* { Icon(HiOutlineMailOpen, { href: "mailto:spencer.speas@gmail.com", color: "white" }) } */}
+                    <p>(916) 990-1341</p>
+                  </div>
+                </a>
+                <a href="mailto:spencer.speas@gmail.com" className="group cursor-pointer text-blue-400 hover:text-blue-500
+                        bg-gray-800 p-2 rounded-lg hover:scale-105
+                        transition duration-500 ease-in-out transform group-hover:-translate-y-1">
+                  <div className="flex flex-col items-center justify-around h-full text-center">
+                    <HiOutlineMailOpen size="3rem" color="white" />
+                    Spencer.Speas<br/>@gmail.com
+                  </div>
+               </a>
               </div>
+
             </div>
           </Section>
 

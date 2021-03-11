@@ -33,14 +33,14 @@ export default function Project({ image, logo, post, title, link, description, c
               { description }
             </p>
           </div>
-          <p className="text-right pb-1">
+          {post && <p className="text-right pb-1">
             <Link href={ post.link }>
               <a className="text-blue-400 hover:text-blue-500">
                 Learn more
                 <AiOutlineArrowRight style={{ display: 'inline-flex', marginInline: '0.3rem', marginBottom: '0.1rem' }} />
               </a>
             </Link>
-          </p>
+          </p>}
         </div>
         {/* icons */}
         { children }
