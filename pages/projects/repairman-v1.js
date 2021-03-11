@@ -15,12 +15,12 @@ export default function Aceso () {
         article: 'Tracking tickets on printed sheets is a nightmare for repair shop managers'
       }}
       time={{
-        start: '2018',
+        start: '2021',
         end: 'Ongoing'
       }}
       link={{
-        pretty: 'AcesoRecovery.com',
-        url: 'https://www.acesorecovery.com'
+        pretty: 'Repairman-Pro.app',
+        url: 'https://Repairman-Pro.app'
       }}
     >
       <p className="mb-2">
@@ -58,12 +58,13 @@ export default function Aceso () {
 
       <p className="mb-2">This was my first version of Repairman Pro, used to validate the idea. I quickly learned I'd need to integrate with popular CRMs before it could be "ramen profitable."</p>
       <p>
-         Check out the integrated version
+        The RepairDesk integrated version of Repairman Pro is still in development.
+         {/* Check out the integrated version
         <Link href="/projects/repairman-v2">
           <a className="text-blue-400 hover:text-blue-500">
             {' '} here.
           </a>
-        </Link>
+        </Link> */}
       </p>
 
       <p className="text-3xl font-semibold mt-6 mb-2">Related</p>
@@ -78,7 +79,17 @@ export default function Aceso () {
           }}
           newTab={true}
         />
-        <RelatedLink
+        <RelatedLink 
+          link={{
+            url: 'https://repairman-pro.app',
+            pretty: 'Repairman Pro'
+          }}
+          image={{
+            src: '/images/projects/Repairman/Landing.jpg'
+          }}
+          newTab={true}
+        />
+        {/* <RelatedLink
           link={{
             url: '/projects/repairman-v2',
             pretty: 'Repairman Pro v2'
@@ -87,7 +98,7 @@ export default function Aceso () {
             src: '/images/projects/Repairman-v2/Landing.jpg'
           }}
           newTab={false}
-        />
+        /> */}
       </div>
 
     </ProjectPost>
