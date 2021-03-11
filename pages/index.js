@@ -8,7 +8,7 @@ import Project from '../components/Project';
 import Tooltip from '../components/Icons/Tooltip';
 import IconContainer from '../components/Icons/IconContainer';
 import Icon from '../components/Icons/Icon';
-import MiniIcon from '../components/Icons/MiniIcon';
+import ExperienceItem from '../components/ExperienceItem';
 
 
 import { FaStripe } from "react-icons/fa";
@@ -19,29 +19,6 @@ import { ImPhone } from "react-icons/im";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { GrWordpress } from "react-icons/gr";
 import { FiChevronDown } from "react-icons/fi";
-
-
-
-const ExperienceItem = ({ title, company, time, description, icon, isLast }) => {
-  return (<>
-    {/* {!isLast && <div className="border-r-2 border-gray-500 absolute top-0" style={{ left: "11px" }} />}   */}
-    {/* <li className="mb-2"> */}
-      {/* <div className="border h-full" /> */}
-    <li className={ isLast ? 'pb-3' : 'border-l-2 border-gray-700 pb-3' }>
-      <div className="flex items-flex-start">
-        <div className="-ml-3">
-          { MiniIcon(icon) }
-        </div>
-        <div className="flex-1 ml-4 max-w-3xl">
-          <p className="text-lg font-semibold">{ title }</p>
-          <p className="text-md opacity-80">{ company }</p>
-          <p className="text-sm opacity-50">{ time }</p>
-          <p>{ description }</p>
-        </div>
-      </div>
-    </li>
-  </>)
-}
 
 
 export default class Home extends React.Component {
