@@ -24,7 +24,7 @@ export default function Aceso () {
       }}
     >
       <p className="mb-2">
-        Patient compliance to home exercise programs is a joke to PT's just about everywhere. 
+        Patient compliance to home exercise programs is a joke to PT's just about anywhere. 
         Probably because these so-called exercise plans are printed comic strips of WikiHow esque pictures, handed to you on your way out the door.
       </p>
       <p className="mb-2">

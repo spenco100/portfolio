@@ -29,10 +29,10 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/projects/aceso": [
+    "/projects/repairman-v1": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/projects/aceso.js"
+      "static/chunks/pages/projects/repairman-v1.js"
     ]
   },
   "ampFirstPages": []

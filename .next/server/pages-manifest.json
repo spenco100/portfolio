@@ -2,6 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/projects/aceso": "pages/projects/aceso.js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/projects/repairman-v1": "pages/projects/repairman-v1.js"
 }

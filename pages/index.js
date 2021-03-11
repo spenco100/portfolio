@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import Router from 'next/router';
 
 import Section from '../components/Section';
 import Project from '../components/Project';
@@ -10,13 +11,14 @@ import Icon from '../components/Icons/Icon';
 import MiniIcon from '../components/Icons/MiniIcon';
 
 
-import { FaStripe } from "react-icons/fa"
+import { FaStripe } from "react-icons/fa";
 import { IoLogoVimeo } from "react-icons/io";
 import { IoLogoSass, IoPieChart, IoCodeSlash } from "react-icons/io5";
 import { SiBulma, SiNetlify, SiGithub, SiFacebook, SiReddit, SiReact, SiApple, SiTailwindcss } from "react-icons/si";
 import { ImPhone } from "react-icons/im";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { GrWordpress } from "react-icons/gr";
+import { FiChevronDown } from "react-icons/fi";
 
 
 
@@ -43,6 +45,19 @@ const ExperienceItem = ({ title, company, time, description, icon, isLast }) => 
 
 
 export default class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.textInput = React.createRef();
+    this.focusTextInput = this.focusTextInput.bind(this);
+  }
+
+  linkClicked (e, id) {
+    e.preventDefault();
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
   render() {
     return (
       <>
@@ -63,7 +78,7 @@ export default class Home extends React.Component {
             </div>
 
             <Tooltip label="My Github activity, the last 4 months">
-              <div className="flex flex-col items-center justify-center overflow-hidden mb-2">  
+              <div className="flex flex-col items-center justify-center overflow-hidden -mb-8">  
                 <div className="relative max-w-6xl">
                   <img
                     style={{ width: '400px', height: 'auto' }}
@@ -79,10 +94,23 @@ export default class Home extends React.Component {
                 </div>
               </div>
             </Tooltip>
+
+
+
+            <div className="animate-bounce cursor-pointer">
+              <a onClick={ (e) => { this.linkClicked(e, '#experience') }}>
+                <FiChevronDown size="3em" color="whitesmoke" />
+              </a>
+            </div>
+
+
+
           </div>
 
 
-          <Section title="Nearly 4 Years in Startups" classes="pt-14">
+          {/* Experience */}
+          <div id="#experience" />
+          <Section title="Nearly 4 Years in Startups" classes="pt-14" passId="experience">
 
             <div className="relative max-w-4xl m-8">
               <ul className="list-none m-0 p-0">
@@ -217,7 +245,7 @@ export default class Home extends React.Component {
                   pretty: "Repairman-Pro.app"
                 }}
                 post={{
-                  link: "/projects/aceso"
+                  link: "/projects/repairman-v1"
                 }}
                 description="Automatic device inspection checklists, connected with RepairDesk."
               >
@@ -244,14 +272,14 @@ export default class Home extends React.Component {
 
 
 
-          <Section title="In Progress" classes="pt-8">
+          <Section title="In Progress" classes="pt-12">
             <div className="flex flex-col items-center md:grid grid-cols-2 gap-4">
 
               {/* Repairman Pro v2 */}
               <Project
                 title="Repairman Pro v2"
                 image={{
-                  src: 'images/projects/Repairman/Landing.jpg',
+                  src: 'images/projects/Repairman-v2/Landing.jpg'
                 }}
                 logo={{
                   src: 'images/projects/Repairman/Logo.png'
@@ -371,10 +399,10 @@ export default class Home extends React.Component {
                   { Icon(Image, { href: "https://nextjs.org/",  label: "NextJS", src: "images/icons/next.svg" }) }
                 </div>
                 <div className="p-1">
-                  { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
+                  { Icon(SiTailwindcss, { href: "https://tailwindcss.com/", color: "#06B6D4", label: "TailwindCSS" }) }
                 </div>
                 <div className="p-1">
-                  { Icon(SiTailwindcss, { href: "https://tailwindcss.com/", color: "#06B6D4", label: "TailwindCSS" }) }
+                  { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
                 </div>
               </div>
             </div>
