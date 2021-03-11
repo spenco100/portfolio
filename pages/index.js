@@ -45,11 +45,6 @@ const ExperienceItem = ({ title, company, time, description, icon, isLast }) => 
 
 
 export default class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.textInput = React.createRef();
-    this.focusTextInput = this.focusTextInput.bind(this);
-  }
 
   linkClicked (e, id) {
     e.preventDefault();
