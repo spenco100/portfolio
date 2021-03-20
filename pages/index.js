@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Router from 'next/router';
 
 import Section from '../components/Section';
 import Project from '../components/Project';
@@ -83,12 +82,20 @@ export default class Home extends React.Component {
             <div className="relative max-w-4xl m-8">
               <ul className="list-none m-0 p-0">
                 <ExperienceItem
-                  title="Macbook Flipper"
-                  company="256 QuickFix"
-                  time="2017 - 2019"
-                  description="After high school I started a company fixing and flipping Macbooks and iPhones, 
-                               until I gained a local reputation that landed me deals with some of the largest device repair shops in my area."
-                  icon={ SiApple }
+                  title="CTO"
+                  company="Aceso Design"
+                  time="2019 - 2021"
+                  description="Technical co-founder left the company, so I learned Javascript, Python, some Go, and took over as CTO.
+                               Fell in love with web development and learned the fullstack, and some ML."
+                  icon={ IoCodeSlash }
+                  isLast={ true }
+                />
+                <ExperienceItem
+                  title="Marketing Lead"
+                  company="Aceso Design"
+                  time="2019 - 2019"
+                  description="Met the co-founder of a medical tech startup, joined the company and quickly became the lead of marketing and advertising."
+                  icon={ IoPieChart }
                   isLast={ false }
                 />
                 <ExperienceItem
@@ -100,21 +107,13 @@ export default class Home extends React.Component {
                   isLast={ false }
                 />
                 <ExperienceItem
-                  title="Marketing Lead"
-                  company="Aceso Design"
-                  time="2019 - 2019"
-                  description="Met the co-founder of a medical tech startup, joined the company and quickly became the lead of marketing and advertising."
-                  icon={ IoPieChart }
+                  title="Macbook Flipper"
+                  company="256 QuickFix"
+                  time="2017 - 2019"
+                  description="After high school I started a company fixing and flipping Macbooks and iPhones, 
+                               until I gained a local reputation that landed me deals with some of the largest device repair shops in my area."
+                  icon={ SiApple }
                   isLast={ false }
-                />
-                <ExperienceItem
-                  title="CTO"
-                  company="Aceso Design"
-                  time="2019 - 2021"
-                  description="Technical co-founder left the company, so I learned Javascript, Python, some Go, and took over as CTO.
-                               Fell in love with web development and learned the fullstack, and some ML."
-                  icon={ IoCodeSlash }
-                  isLast={ true }
                 />
               </ul>
             </div>
