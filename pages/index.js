@@ -88,7 +88,7 @@ export default class Home extends React.Component {
                   description="Technical co-founder left the company, so I learned Javascript, Python, some Go, and took over as CTO.
                                Fell in love with web development and learned the fullstack, and some ML."
                   icon={ IoCodeSlash }
-                  isLast={ true }
+                  isLast={ false }
                 />
                 <ExperienceItem
                   title="Marketing Lead"
@@ -113,7 +113,7 @@ export default class Home extends React.Component {
                   description="After high school I started a company fixing and flipping Macbooks and iPhones, 
                                until I gained a local reputation that landed me deals with some of the largest device repair shops in my area."
                   icon={ SiApple }
-                  isLast={ false }
+                  isLast={ true }
                 />
               </ul>
             </div>
@@ -147,7 +147,7 @@ export default class Home extends React.Component {
 
                 <IconContainer
                   top={<>
-                    { Icon(Image, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
+                    { Icon(null, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
                     { Icon(SiBulma, { href: "https://bulma.io/", color: "#00D1B2", label: "Bulma" }) }
                     { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#BF4080", label: "Sass" }) }
                     { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
@@ -155,7 +155,7 @@ export default class Home extends React.Component {
                   bottom={<>
                     { Icon(IoLogoVimeo, { href: "https://vimeo.com/", color: "rgb(15, 174, 241)", label: "Vimeo" }) }
                     { Icon(FaStripe, { href: "https://stripe.com/", color: "white", label: "Stripe" }) }
-                    { Icon(Image, { href: "https://firebase.google.com/", label: "Firebase", src: "/images/icons/firebase.svg" }) }
+                    { Icon(null, { href: "https://firebase.google.com/", label: "Firebase", src: "/images/icons/firebase.svg" }) }
                   </>}
                   showBoth={true}
                 />
@@ -182,16 +182,16 @@ export default class Home extends React.Component {
               >
                 <IconContainer
                   top={<>
-                    { Icon(Image, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
-                    { Icon(Image, { href: "https://vuetifyjs.com/en/", label: "Vuetify", src: "/images/icons/vuetify.svg" }) }
-                    { Icon(Image, { href: "https://firebase.google.com/", label: "Firebase", src: "/images/icons/firebase.svg" }) }
+                    { Icon(null, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
+                    { Icon(null, { href: "https://vuetifyjs.com/en/", label: "Vuetify", src: "/images/icons/vuetify.svg" }) }
+                    { Icon(null, { href: "https://firebase.google.com/", label: "Firebase", src: "/images/icons/firebase.svg" }) }
                     { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
                   </>}
                   bottom={<>
-                    { Icon(Image, { href: "https://www.python.org/psf-landing/", src: "/images/icons/python.svg", label: "Python" }) }
-                    { Icon(Image, { href: "https://nodejs.org/en/", src: "/images/icons/node.svg", label: "NodeJS" }) }
-                    { Icon(Image, { href: "https://redis.io/", src: "/images/icons/redis-cube.svg", label: "Redis" }) }
-                    { Icon(Image, { href: "https://cloud.google.com/", src: "/images/icons/google-cloud.png", label: "Google Compute Engine" }) }
+                    { Icon(null, { href: "https://www.python.org/psf-landing/", src: "/images/icons/python.svg", label: "Python" }) }
+                    { Icon(null, { href: "https://nodejs.org/en/", src: "/images/icons/node.svg", label: "NodeJS" }) }
+                    { Icon(null, { href: "https://redis.io/", src: "/images/icons/redis-cube.svg", label: "Redis" }) }
+                    { Icon(null, { href: "https://cloud.google.com/", src: "/images/icons/google-cloud.png", label: "Google Compute Engine" }) }
                   </>}
                   showBoth={true}
                 />
@@ -218,15 +218,15 @@ export default class Home extends React.Component {
               >
                 <IconContainer
                   top={<>
-                    { Icon(Image, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
+                    { Icon(null, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
                     { Icon(SiBulma, { href: "https://bulma.io/", color: "#00D1B2", label: "Bulma" }) }
                     { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#BF4080", label: "Sass" }) }
                     { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
                   </>}
                   bottom={<>
-                    { Icon(Image, { href: "https://firebase.google.com/", label: "Firebase", src: "/images/icons/firebase.svg" }) }
-                    { Icon(Image, { href: "https://nodejs.org/en/", src: "/images/icons/node.svg", label: "NodeJS" }) }
-                    { Icon(Image, { href: "https://www.repairdesk.co/", src: "/images/icons/repairdesk.svg", label: "RepairDesk" }) }
+                    { Icon(null, { href: "https://firebase.google.com/", label: "Firebase", src: "/images/icons/firebase.svg" }) }
+                    { Icon(null, { href: "https://nodejs.org/en/", src: "/images/icons/node.svg", label: "NodeJS" }) }
+                    { Icon(null, { href: "https://www.repairdesk.co/", src: "/images/icons/repairdesk.svg", label: "RepairDesk" }) }
                   </>}
                   showBoth={true}
                 />
@@ -261,15 +261,15 @@ export default class Home extends React.Component {
               >
                 <IconContainer
                   top={<>
-                    { Icon(Image, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
-                    { Icon(Image, { href: "https://vue.chakra-ui.com/", src: "/images/icons/chakra.svg", label: "ChakraUI" }) }
+                    { Icon(null, { href: "https://vuejs.org/", src: "/images/icons/vue.svg", label: "Vue" }) }
+                    { Icon(null, { href: "https://vue.chakra-ui.com/", src: "/images/icons/chakra.svg", label: "ChakraUI" }) }
                     { Icon(IoLogoSass, { href: "https://sass-lang.com/", color: "#BF4080", label: "Sass" }) }
                     { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
                   </>}
                   bottom={<>
-                    { Icon(Image, { href: "https://www.mongodb.com/cloud/atlas", src: "/images/icons/mongo.svg", label: "MongoDB" }) }
-                    { Icon(Image, { href: "https://nodejs.org/en/", src: "/images/icons/node.svg", label: "NodeJS" }) }
-                    { Icon(Image, { href: "https://www.repairdesk.co/", src: "/images/icons/repairdesk.svg", label: "RepairDesk" }) }
+                    { Icon(null, { href: "https://www.mongodb.com/cloud/atlas", src: "/images/icons/mongo.svg", label: "MongoDB" }) }
+                    { Icon(null, { href: "https://nodejs.org/en/", src: "/images/icons/node.svg", label: "NodeJS" }) }
+                    { Icon(null, { href: "https://www.repairdesk.co/", src: "/images/icons/repairdesk.svg", label: "RepairDesk" }) }
                   </>}
                   showBoth={true}
                 />
@@ -303,8 +303,8 @@ export default class Home extends React.Component {
                   </>}
                   bottom={<>
                     {/* { Icon(IoLogoVimeo, { href: "https://vimeo.com/", color: "rgb(15, 174, 241)", label: "Vimeo" }) } */}
-                    { Icon(Image, { href: "https://firebase.google.com/", label: "Firebase", src: "/images/icons/firebase.svg" }) }
-                    { Icon(Image, { href: "https://github.com/jef/streetmerchant", label: "StreetMerchant", src: "images/relatedLinks/streetmerchant.png" }) }
+                    { Icon(null, { href: "https://firebase.google.com/", label: "Firebase", src: "/images/icons/firebase.svg" }) }
+                    { Icon(null, { href: "https://github.com/jef/streetmerchant", label: "StreetMerchant", src: "images/relatedLinks/streetmerchant.png" }) }
                   </>}
                   showBoth={true}
                 />
@@ -374,7 +374,7 @@ export default class Home extends React.Component {
                   { Icon(SiReact, { href: "https://reactjs.org/", color: "#61DAFB", label: "React" }) }
                 </div>
                 <div className="p-1">
-                  { Icon(Image, { href: "https://nextjs.org/",  label: "NextJS", src: "images/icons/next.svg" }) }
+                  { Icon(null, { href: "https://nextjs.org/",  label: "NextJS", src: "images/icons/next.svg" }) }
                 </div>
                 <div className="p-1">
                   { Icon(SiTailwindcss, { href: "https://tailwindcss.com/", color: "#06B6D4", label: "TailwindCSS" }) }

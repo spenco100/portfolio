@@ -5,11 +5,13 @@ import Tooltip from './Tooltip';
 
 // holds a specific, given icon 
 export default function buildIcon(componentName, { href, color, label, src }) {
-  let icon = React.createElement( // create element based on a string, like IoLogoVue
-    eval(componentName),
-    { color, size: '3rem' }
-  );
-  if (src) { // if passed a source, it is a custom icon, not from react-icons
+  let icon;
+  if (componentName) {
+    React.createElement( // create element based on custom component
+      eval(componentName),
+      { color, size: '3rem' }
+    );
+  } else { // no componentName should default to using an img tag
     icon = React.createElement(
       'img',
       { src, width: 48, height: 48, style: {  }, alt: `${label} icon` }
