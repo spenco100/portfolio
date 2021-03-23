@@ -7,7 +7,7 @@ import Tooltip from './Tooltip';
 export default function buildIcon(componentName, { href, color, label, src }) {
   let icon;
   if (componentName) {
-    React.createElement( // create element based on custom component
+    icon = React.createElement( // create element based on custom component
       eval(componentName),
       { color, size: '3rem' }
     );
