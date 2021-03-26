@@ -22,7 +22,7 @@ import { FiChevronDown } from "react-icons/fi";
 
 export default class Home extends React.Component {
 
-  linkClicked (e, id) {
+  smoothScrollToLink(e, id) {
     e.preventDefault();
     document.querySelector(id).scrollIntoView({
       behavior: 'smooth'
@@ -67,7 +67,7 @@ export default class Home extends React.Component {
             </Tooltip>
 
             <div className="animate-bounce cursor-pointer">
-              <a onClick={ (e) => { this.linkClicked(e, '#experience') }}>
+              <a onClick={ (e) => { this.smoothScrollToLink(e, '#experience') }}>
                 <FiChevronDown size="3em" color="whitesmoke" />
               </a>
             </div>
@@ -76,7 +76,7 @@ export default class Home extends React.Component {
 
 
           {/* Experience */}
-          <div id="#experience" />
+          <div id="#experience" /> {/* invisible scroll anchor */}
           <Section title="Nearly 4 Years in Startups" classes="pt-14" passId="experience">
 
             <div className="relative max-w-4xl m-8">
@@ -122,7 +122,7 @@ export default class Home extends React.Component {
 
 
 
-          <Section title="Polished Projects" classes="pt-8">
+          <Section title="Polished Projects" classes="pt-8 bg-gray-900">
             <div className="flex flex-col items-center md:grid grid-cols-2 lg:grid-cols-3 gap-4">
 
 
@@ -239,7 +239,7 @@ export default class Home extends React.Component {
 
 
 
-          <Section title="In Progress" classes="pt-12">
+          <Section title="In Progress" classes="pt-12 bg-gray-900">
             <div className="flex flex-col items-center md:grid grid-cols-2 gap-4">
 
               {/* Repairman Pro v2 */}
@@ -365,8 +365,9 @@ export default class Home extends React.Component {
             </div>
           </Section>
 
-          <div className="grid grid-cols-4 grid-rows-1 pt-10 pb-5" style={{ backgroundColor: "#090C13" }}>
-            <div className="col-start-1 col-end-5 flex flex-col items-center text-center text-white">
+          <div className="flex flex-col pt-10 pb-8" style={{ backgroundColor: "#090C13" }}>
+
+            <div className="flex flex-col items-center text-center text-white">
               <p className="text-2xl font-semibold">This Site</p>
               <p className="text-sm">Powered by</p>
               <div className="flex flex-row p-2">
@@ -384,9 +385,31 @@ export default class Home extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="text-left col-start-4 text-gray-400">
-              <p className="opacity-50">© Spencer Speas 2020</p>
+
+            <div className="mt-2 flex flex-col text-center w-full">
+              <p className="opacity-50 text-gray-400">© Spencer Speas 2020</p>
             </div>
+            {/* <div className="col-start-1 col-end-5 flex flex-col items-center text-center text-white">
+              <p className="text-2xl font-semibold">This Site</p>
+              <p className="text-sm">Powered by</p>
+              <div className="flex flex-row p-2">
+                <div className="p-1">
+                  { Icon(SiReact, { href: "https://reactjs.org/", color: "#61DAFB", label: "React" }) }
+                </div>
+                <div className="p-1">
+                  { Icon(null, { href: "https://nextjs.org/",  label: "NextJS", src: "images/icons/next.svg" }) }
+                </div>
+                <div className="p-1">
+                  { Icon(SiTailwindcss, { href: "https://tailwindcss.com/", color: "#06B6D4", label: "TailwindCSS" }) }
+                </div>
+                <div className="p-1">
+                  { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
+                </div>
+              </div>
+            </div> */}
+            {/* <div className="text-left col-start-4 text-gray-400">
+              <p className="opacity-50">© Spencer Speas 2020</p>
+            </div> */}
           </div>
 
         </div>

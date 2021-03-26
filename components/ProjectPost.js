@@ -13,15 +13,17 @@ export default function ProjectPost({ hero, title, time, link, children }) {
 
       <div className="flex flex-col items-center justify-center overflow-hidden mb-2">
         <div className="relative max-w-6xl">
-          <img
-            src={ hero.src }
-            className="object-cover rounded-b-xl"
-          />
+          
           <div className="absolute p-4 inset-0 flex flex-col justify-end bg-gradient-to-b from-transparent to-gray-900 backdrop backdrop-blur-5 text-white
                           transition duration-500 ease-in-out transform hover:opacity-20">
             <h1 className="font-bold text-4xl">{ title.main }</h1>
             <span className="opacity-70">{ time.start } {' '}-{' '} { time.end }</span>
           </div>
+
+          <img
+            src={ hero.src }
+            className="object-cover rounded-b-xl"
+          />
         </div>
       </div>
 

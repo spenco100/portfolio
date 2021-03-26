@@ -4,7 +4,7 @@ import RelatedLink from '../../components/RelatedLink.js'
 import React from 'react';
 
 export default class Aceso extends React.Component {
-  linkClicked (e, id) {
+  smoothScrollToLink(e, id) {
     e.preventDefault();
     document.querySelector(id).scrollIntoView({
       behavior: 'smooth'
@@ -31,7 +31,7 @@ export default class Aceso extends React.Component {
       >
         <p className="text-xl font-semibold pb-2">
           This is a long read, 
-          <a className="text-blue-400 hover:text-blue-500" onClick={ (e) => { this.linkClicked(e, '#tldr') }}>skip ahead</a> if you want
+          <a className="text-blue-400 hover:text-blue-500" onClick={ (e) => { this.smoothScrollToLink(e, '#tldr') }}>skip ahead</a> if you want
         </p>
         <p className="mb-2">
           As said 
