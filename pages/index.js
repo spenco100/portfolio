@@ -7,13 +7,15 @@ import Project from '../components/Project';
 import Tooltip from '../components/Icons/Tooltip';
 import IconContainer from '../components/Icons/IconContainer';
 import Icon from '../components/Icons/Icon';
-import ExperienceItem from '../components/ExperienceItem';
+import ExperienceItem from '../components/Home/ExperienceItem';
+
+// import MiniIcon from '../components/Icons/MiniIcon';
 
 
 import { FaStripe } from "react-icons/fa";
 import { IoLogoVimeo } from "react-icons/io";
 import { IoLogoSass, IoPieChart, IoCodeSlash } from "react-icons/io5";
-import { SiBulma, SiNetlify, SiGithub, SiFacebook, SiReddit, SiReact, SiApple, SiTailwindcss } from "react-icons/si";
+import { SiBulma, SiNetlify, SiGithub, SiFacebook, SiReddit, SiReact, SiApple } from "react-icons/si";
 import { ImPhone } from "react-icons/im";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { GrWordpress } from "react-icons/gr";
@@ -61,24 +63,46 @@ export default class Home extends React.Component {
                                   transition duration-500 ease-in-out transform hover:opacity-20"
                   >
                     <p className="font-mono text-lg">Vue / Express / Node / NoSQL</p>
-                  </div>  
+                  </div>
                 </div>
               </div>
             </Tooltip>
-
             <div className="animate-bounce cursor-pointer">
               <a onClick={ (e) => { this.smoothScrollToLink(e, '#experience') }}>
                 <FiChevronDown size="3em" color="whitesmoke" />
               </a>
             </div>
-
           </div>
 
 
-          {/* Experience */}
-          <div id="#experience" /> {/* invisible scroll anchor */}
-          <Section title="Nearly 4 Years in Startups" classes="pt-14" passId="experience">
+          <div className="z-50 w-full bg-black sticky top-0 py-4 items-center justify-center flex direction-row">
+            {/* <a onClick={ (e) => { this.smoothScrollToLink(e, '#contact') }}  className="text-blue-400 hover:text-blue-500">
+              Contact
+            </a>
+             */}
+            {/* <div className="grid grid-cols-3 text-white">
+              <div className="inline-flex cursor-pointer group mr-2">
+                <p className="mr-1 text-blue-400 group-hover:text-blue-500">@spenco100</p>
+                { MiniIcon(SiGithub) }
+              </div>
 
+              <div className="inline-flex cursor-pointer group mr-2">
+                <p className="mr-1 text-blue-400 group-hover:text-blue-500">@spencer.speas.77</p>
+                { MiniIcon(SiFacebook) }
+              </div>
+
+              <div className="inline-flex cursor-pointer group mr-2">
+                <p className="mr-1 text-blue-400 group-hover:text-blue-500">@sragan16</p>
+                { MiniIcon(SiReddit) }
+              </div>
+            </div> */}
+          </div>
+
+          {/* invisible scroll anchor */}
+          <div id="#experience" />
+
+          {/* Experience */}
+          <Section title="4 Years of Startups" classes="pt-14" passId="experience">
             <div className="relative max-w-4xl m-8">
               <ul className="list-none m-0 p-0">
                 <ExperienceItem
@@ -319,23 +343,24 @@ export default class Home extends React.Component {
 
               <div className="grid grid-cols-3 mt-5">                
                 
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center group">
+                  {/* border-b-2 border-transparent hover:border-white transform duration-500 ease-in-out */}
                     { Icon(SiGithub, { href: "https://github.com/spenco100", color: "white" }) }
-                    <a href="https://github.com/spenco100" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                    <a href="https://github.com/spenco100" className="cursor-pointer text-blue-400 group-hover:text-blue-500">
                       @spenco100
                     </a>
                   </div>
                 
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center group">
                     { Icon(SiFacebook, { href: "https://facebook.com/spencer.speas.77", color: "white" }) }
-                    <a href="https://facebook.com/spencer.speas.77" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                    <a href="https://facebook.com/spencer.speas.77" className="cursor-pointer text-blue-400 group-hover:text-blue-500">
                       @spencer.speas.77
                     </a>
                   </div>
                 
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center group">
                     { Icon(SiReddit, { href: "https://reddit.com/u/sragan16", color: "white" }) }
-                    <a href="https://reddit.com/u/sragan16" className="cursor-pointer text-blue-400 hover:text-blue-500">
+                    <a href="https://reddit.com/u/sragan16" className="cursor-pointer text-blue-400 group-hover:text-blue-500">
                       @sragan16
                     </a>
                   </div>
@@ -348,7 +373,6 @@ export default class Home extends React.Component {
                         transition duration-500 ease-in-out transform group-hover:-translate-y-1">
                   <div className="flex flex-col items-center justify-around h-full text-center">
                     <ImPhone size="3rem" color="white" />
-                    {/* { Icon(HiOutlineMailOpen, { href: "mailto:spencer.speas@gmail.com", color: "white" }) } */}
                     <p>(916) 990-1341</p>
                   </div>
                 </a>
@@ -364,53 +388,6 @@ export default class Home extends React.Component {
 
             </div>
           </Section>
-
-          <div className="flex flex-col pt-10 pb-8" style={{ backgroundColor: "#090C13" }}>
-
-            <div className="flex flex-col items-center text-center text-white">
-              <p className="text-2xl font-semibold">This Site</p>
-              <p className="text-sm">Powered by</p>
-              <div className="flex flex-row p-2">
-                <div className="p-1">
-                  { Icon(SiReact, { href: "https://reactjs.org/", color: "#61DAFB", label: "React" }) }
-                </div>
-                <div className="p-1">
-                  { Icon(null, { href: "https://nextjs.org/",  label: "NextJS", src: "images/icons/next.svg" }) }
-                </div>
-                <div className="p-1">
-                  { Icon(SiTailwindcss, { href: "https://tailwindcss.com/", color: "#06B6D4", label: "TailwindCSS" }) }
-                </div>
-                <div className="p-1">
-                  { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-2 flex flex-col text-center w-full">
-              <p className="opacity-50 text-gray-400">© Spencer Speas 2020</p>
-            </div>
-            {/* <div className="col-start-1 col-end-5 flex flex-col items-center text-center text-white">
-              <p className="text-2xl font-semibold">This Site</p>
-              <p className="text-sm">Powered by</p>
-              <div className="flex flex-row p-2">
-                <div className="p-1">
-                  { Icon(SiReact, { href: "https://reactjs.org/", color: "#61DAFB", label: "React" }) }
-                </div>
-                <div className="p-1">
-                  { Icon(null, { href: "https://nextjs.org/",  label: "NextJS", src: "images/icons/next.svg" }) }
-                </div>
-                <div className="p-1">
-                  { Icon(SiTailwindcss, { href: "https://tailwindcss.com/", color: "#06B6D4", label: "TailwindCSS" }) }
-                </div>
-                <div className="p-1">
-                  { Icon(SiNetlify, { href: "https://www.netlify.com/", color: "#15847D", label: "Netlify" }) }
-                </div>
-              </div>
-            </div> */}
-            {/* <div className="text-left col-start-4 text-gray-400">
-              <p className="opacity-50">© Spencer Speas 2020</p>
-            </div> */}
-          </div>
 
         </div>
       </>

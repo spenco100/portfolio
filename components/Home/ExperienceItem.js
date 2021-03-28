@@ -1,4 +1,4 @@
-import MiniIcon from '../components/Icons/MiniIcon';
+import MiniIcon from '../Icons/MiniIcon';
 
 export default function ExperienceItem ({ title, company, time, description, icon, isLast }) {
   return (<>
