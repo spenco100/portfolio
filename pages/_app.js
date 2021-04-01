@@ -33,14 +33,14 @@ export default class MyApp extends React.Component {
       <div className="relative">
 
         {/* Header w/ Contact */}
-        <div style={{ backgroundColor: this.state.color }} className="transition duration-200 ease-in-out fixed z-50 top-0 w-full text-blue-400 flex flex-direction-row px-20 py-3 justify-between">
+        {/* <div style={{ backgroundColor: this.state.color }} className="transition duration-200 ease-in-out fixed z-50 top-0 w-full text-blue-400 flex flex-direction-row px-20 py-3 justify-between">
           <a className="text-blue-400 hover:text-blue-500" onClick={ (e) => { this.smoothScrollToLink(e, '#contact') }}>
             Contact Me
           </a>
           <p className="hover:text-blue-500 cursor-pointer">
             <a href="mailto:spencer.speas@gmail.com">Spencer.Speas@gmail.com</a>
           </p>
-        </div>
+        </div> */}
 
         {/* Page content */}
         <Component {...pageProps} />
