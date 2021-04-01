@@ -11,7 +11,6 @@ import ExperienceItem from '../components/Home/ExperienceItem';
 
 // import MiniIcon from '../components/Icons/MiniIcon';
 
-
 import { FaStripe } from "react-icons/fa";
 import { IoLogoVimeo } from "react-icons/io";
 import { IoLogoSass, IoPieChart, IoCodeSlash } from "react-icons/io5";
@@ -41,13 +40,20 @@ export default class Home extends React.Component {
 
 
           {/* Hero */}
-          <div className="h-screen bg-gray-800 flex flex-col items-center justify-around text-center text-white">
+          <div className="h-screen bg-gray-800 flex flex-col items-center justify-around text-center text-white pt-10">
             <div className="flex flex-col items-center">
               <img src="/images/home/profile.jpg" alt="My wedding picture" 
                   className="my-4 rounded-full w-72 shadow-lg transition duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl" 
               />
               <h1 className="text-5xl font-extrabold">Spencer Speas</h1>
               <h2 className="text-2xl pt-2 font-mono font-bold">SaaS Specialist</h2>
+              <div className="mt-5 flex align-center">
+                <button className="transition duration-500 ease-in-out transform hover:scale-110 
+                                   bg-gray-700 hover:bg-gray-600 py-3 px-5 rounded-lg font-bold">
+                                    {/* hover:-translate-y-1 */}
+                  Contact Me
+                </button>
+              </div>
             </div>
 
             <Tooltip label="My Github activity, the last 4 months">
@@ -72,30 +78,6 @@ export default class Home extends React.Component {
                 <FiChevronDown size="3em" color="whitesmoke" />
               </a>
             </div>
-          </div>
-
-
-          <div className="z-50 w-full bg-black sticky top-0 py-4 items-center justify-center flex direction-row">
-            {/* <a onClick={ (e) => { this.smoothScrollToLink(e, '#contact') }}  className="text-blue-400 hover:text-blue-500">
-              Contact
-            </a>
-             */}
-            {/* <div className="grid grid-cols-3 text-white">
-              <div className="inline-flex cursor-pointer group mr-2">
-                <p className="mr-1 text-blue-400 group-hover:text-blue-500">@spenco100</p>
-                { MiniIcon(SiGithub) }
-              </div>
-
-              <div className="inline-flex cursor-pointer group mr-2">
-                <p className="mr-1 text-blue-400 group-hover:text-blue-500">@spencer.speas.77</p>
-                { MiniIcon(SiFacebook) }
-              </div>
-
-              <div className="inline-flex cursor-pointer group mr-2">
-                <p className="mr-1 text-blue-400 group-hover:text-blue-500">@sragan16</p>
-                { MiniIcon(SiReddit) }
-              </div>
-            </div> */}
           </div>
 
           {/* invisible scroll anchor */}
@@ -276,7 +258,7 @@ export default class Home extends React.Component {
                   src: 'images/projects/Repairman/Logo.png'
                 }}
                 link={{
-                  pretty: "Anticipated release 3/17/21"
+                  pretty: "Anticipated release 5/17/21"
                 }}
                 // post={{
                 //   link: "/projects/aceso"
@@ -309,7 +291,7 @@ export default class Home extends React.Component {
                   src: 'images/projects/Streetrat/Logo.png'
                 }}
                 link={{
-                  pretty: "Anticipated release 3/30/21"
+                  pretty: "Anticipated release 5/30/21"
                 }}
                 // post={{
                 //   link: "/projects/aceso"

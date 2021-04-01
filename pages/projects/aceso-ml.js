@@ -31,7 +31,7 @@ export default class Aceso extends React.Component {
       >
         <p className="text-xl font-semibold pb-2">
           This is a long read, 
-          <a className="text-blue-400 hover:text-blue-500" onClick={ (e) => { this.smoothScrollToLink(e, '#tldr') }}>skip ahead</a> if you want
+          <a className="text-blue-400 hover:text-blue-500" onClick={ (e) => { this.smoothScrollToLink(e, '#tldr') }}>skip ahead</a> if you want.
         </p>
         <p className="mb-2">
           As said 
